@@ -8,8 +8,8 @@ export default function App() {
 
   function addNote() {
     let addedNote = list.concat(newNote);
-    setList(addedNote);
     setNewNote('');
+    setList(addedNote);
   }
 
   function handleChange(e) {
@@ -18,11 +18,11 @@ export default function App() {
 
   return (
     <div>
-       <h1>My Notes</h1>
-       <imput type="text" value={newNote} onChange={handleChange} />
+      <h1>My Notes</h1>
+      <input type="text" value={newNote} onChange={handleChange} />
 
-       <button> onClick={addNote}>Save</button>
-       <Notes data={list}/>
+      <button onClick={addNote}>Save</button>
+      <Notes data={list} />
     </div>
   );
 }
